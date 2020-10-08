@@ -58,17 +58,17 @@ namespace TechJobsConsole
 
             return jobs;
         }
-        public static List<Dictionary<string,string>> FindByValue(string value)
+        public static List<Dictionary<string, string>> FindByValue(string value)
         {
             // load data, if not already loaded
             LoadData();
             List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
 
-            foreach(Dictionary<string,string> job in AllJobs)
+            foreach (Dictionary<string, string> job in AllJobs)
             {
-                foreach(string item in job.Keys)
+                foreach (string item in job.Keys)
                 {
-                    if(jobs.Contains(job))
+                    if (jobs.Contains(job))
                     {
                         continue;
                     }
