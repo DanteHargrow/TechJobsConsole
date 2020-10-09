@@ -66,14 +66,15 @@ namespace TechJobsConsole
 
             foreach (Dictionary<string, string> job in AllJobs)
             {
-                foreach (string item in job.Keys)
+                foreach (string item in job.Values)
                 {
-                    if (jobs.Contains(job))
+
+                    string aValue = item.ToLower();
+                    if (aValue.Contains(value))
                     {
-                        continue;
-                    }
-                    else
                         jobs.Add(job);
+                    }
+                        
                 }
             }
 
